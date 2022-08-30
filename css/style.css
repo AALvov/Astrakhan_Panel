@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'HeliosCond';
+  src: local('HeliosCond'), url('../fonts/HeliosCond.woff2') format('woff2'), url('../fonts/HeliosCond.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HeliosCond-Bold';
+  src: local('HeliosCond-Bold'), url('../fonts/HeliosCond-Bold.woff2') format('woff2'), url('../fonts/HeliosCond-Bold.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'HeliosCond', 'Montesarat', sans-serif;
+  max-height: 1080px;
+  /* overflow: hidden; */
+  background-image:url(../img/Астрахань.\ Фон\ \(флаг\).jpg);
+  background-repeat: no-repeat;
+}
+
+.container {
+display: flex;
+position: relative;
+align-items: center;
+background: url(../img/Картинка\ для\ Фона\ 1.jpg);
+/* outline: 1px solid red; */
+background-size: 100% 100%;
+background-position: center center;
+background-repeat: no-repeat;
+height: 1080px;
+}
+
+
+.header {
+  background: #0079c2;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+
+.btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  /* outline: 2px solid red; */
+  width: 500px;
+  height: 350px;
+  color: white;
+  font-size: 30px;
+}
+
+.first__btn {
+  top: 100px;
+  left: 60px;
+}
+
+.second__btn {
+  top: 100px;
+  right: 60px;
+}
+
+
+.close__btn {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  height: 1080px;
+  width: 1920px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.modal__window-first,
+.modal__window-second,
+.modal__window-third,
+.modal__window-fourth {
+width: 90%;
+display: none;
+padding: 10px;
+background:rgb(236,236,236);
+outline: 1px solid #000;
+opacity: 0;
+display: none;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+transition: opacity 0.3s ease-in-out;
+z-index: 2;
+}
+
+.third__btn {
+  bottom: 100px;
+  left: 60px;
+}
+
+.fourth__btn {
+  bottom: 100px;
+  right: 60px;
+}
+
+.modal__window-active {
+  opacity: 1;
+  display: block;
+
+}
+
